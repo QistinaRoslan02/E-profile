@@ -1,0 +1,261 @@
+.title{
+    font-family: "Monomaniac One", serif;
+    font-weight: 600;
+    font-size: 33px;
+    text-transform: uppercase;
+    color: transparent;
+    background: linear-gradient(135deg, #93329E, #9400FF, #AED2FF);
+    background-size: 500px 100;
+    background-clip: text;
+  }
+body{
+    height: 100%;
+}
+form{
+    width: 34%;
+    margin: auto;
+    padding-top: 25px;
+}
+.bg{
+    background-color: #acacac;
+}
+.btn-color{
+    background-color: #074799;
+    border: none;
+}
+
+/*-------profile-----*/
+.card-title{
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+.card-text{
+    margin: 10px 0;
+}
+.btn{
+    margin-top: 20px;
+}
+
+/*----application-----*/
+.col-3{
+    width: 75%;
+}
+
+
+/*--------------contact----------*/
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color:#ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ff004f;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 80%;
+    border: 0;
+    outline: none;
+    background: #4b4949;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    font-weight: 300;
+    margin-top: 20px;
+}
+#msg{
+    color: #61b752;
+    margin-top: 15px;
+    display: block;
+}
+
+/*-------services------*/
+.card{
+    border: none;
+    outline: none;
+}
+.card p{
+    color: rgb(68, 68, 68);
+}
+.circle{
+    height: 70px;
+    width: 70px;
+    background-color: rgb(102, 95, 95);
+    color: black;
+    padding: 12px;
+    font-size: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.card:hover .circle{
+    background-color: black;
+    color: rgb(170, 165, 165);
+    transition: 0.5s;
+}
+/*---profile---*/
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    animation: slideIn 1s ease-in-out;
+}
+
+.card-text {
+    margin: 10px 0;
+    animation: slideIn 1s ease-in-out;
+}
+
+.btn {
+    margin-top: 20px;
+    animation: slideIn 1s ease-in-out;
+}
+
+/* Profile Picture Styling */
+#profileImage, #previewImage {
+    border: 5px solid #007BFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: bounceIn 1s ease-in-out;
+}
+
+/* Hover Effects */
+#profileImage:hover, #previewImage:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/*portfolio*/
+.portfolio .item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+.portfolio .item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.portfolio .item span {
+    display: block;
+    margin-top: 10px;
+}
+.portfolio .control ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.portfolio .control ul li {
+    display: inline-block;
+    margin: 5px 10px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.portfolio .control ul li.active {
+    font-weight: bold;
+    color: #007bff;
+    background-color: #e3f2fd;
+}
+@media (max-width: 768px) {
+    .portfolio .item {
+        margin-bottom: 20px;
+    }
+}

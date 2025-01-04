@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProfileHub</title>
+     <!--Bootstraps link-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+     <!--fonts awesome-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+     <!--chartjs-->
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+     <!--style.css-->
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+          <img src="img/logo.png" alt="ProfileHub" width="40px">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+          aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="profile.html">Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="portfolio.html">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Dashboard.html">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+            </ul>
+            <div class="form-check form-switch">
+                <input class="form-check" type="checkbox" id="darkModeToggle"/>
+                <label class="form-check-label" for="darkModeToggle" id="themeLabel">Dark Mode</label>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="container mt-4 bg-light py-5">
+        <h1 class="text-center pb-5">Dashboard</h1>
+        <div class="row pb-3">
+            <div class="col-md-4 mb-3">
+                <div class="card shadow bg-body-tertiary border-0 py-3">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <h5 class="card-title"><i class="fas fa-chart-bar"></i> Bar Chart</h5>
+                        </div>
+                        <canvas id="chart1"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card shadow bg-body-tertiary border-0 py-3">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <h5 class="card-title"><i class="fas fa-chart-line"></i> Line Chart</h5>
+                        </div>
+                        <canvas id="chart2"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card shadow bg-body-tertiary border-0 py-3">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <h5 class="card-title"><i class="fas fa-chart-area"></i> Stepped Line Chart</h5>
+                        </div>
+                        <canvas id="chart3"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const chart1 = document.getElementById('chart1');
+        new Chart(chart1, {
+            type: 'bar',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        const chart2 = document.getElementById('chart2');
+        new Chart(chart2, {
+            type: 'line',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        const chart3 = document.getElementById('chart3');
+        new Chart(chart3, {
+            type: 'line',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    borderWidth: 1,
+                    stepped: true,
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+      <!--darkmode script-->
+    <script>
+      function setTheme(theme){
+          document.documentElement.setAttribute("data-bs-theme", theme);
+          localStorage.setItem("theme",theme);
+          document.getElementById("themeLabel").innerText = 
+          theme === "dark" ? "Dark Mode On" : "Dark Mode Off";
+      }
+
+      document
+      .getElementById("darkModeToggle")
+      .addEventListener("change",function (event) {
+          if (event.target.checked) {
+              setTheme("dark");
+          }   else {
+                  setTheme("");
+              }
+      });
+
+      window.onload = function () {
+        let savedTheme = localStorage.getItem("theme");
+        if(savedTheme) {
+          setTheme(savedTheme);
+          if (savedTheme === "dark") {
+            document.getElementById("darkModeToggle"), checked = true;
+          }
+        }
+      };
+  </script>
+</body>
+</html>
